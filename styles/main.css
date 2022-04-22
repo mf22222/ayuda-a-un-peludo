@@ -1,3 +1,7 @@
 .members {
     max-width: 400px;
 }
+
+.hide {
+    display: none;
+}
