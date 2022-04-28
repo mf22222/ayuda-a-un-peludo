@@ -1,3 +1,4 @@
+const weatherApiKey = 0; // poner tu api key
 let contadorClicks = 0;
 
 $(document).ready(function() {
@@ -21,4 +22,21 @@ $(document).ready(function() {
         console.log("Formulario enviado")
         event.preventDefault();
     });
+
+    if('geolocation' in navigator) {
+        /* geolocation is available */
+        console.log("available")
+        navigator.geolocation.getCurrentPosition((position) => {
+            console.log(position.coords.latitude);
+            console.log(position.coords.longitude);
+            $.get(`https://api.weatherapi.com/v1/current.json?q=${position.coords.latitude},${position.coords.longitude}&key=${weatherApiKey}`, 
+            function(data) {
+                console.log(data)
+            })
+        });
+    } else {
+        /* geolocation IS NOT available */
+        console.log("not available")
+    }
 });
+
