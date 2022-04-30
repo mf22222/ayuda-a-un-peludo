@@ -36,6 +36,7 @@ $(document).ready(function() {
                     <div class="weather">
                         <p>El clima en ${data.location.country}, ${data.location.region}</p>
                         <p><img src="https:${data.current.condition.icon}"/> ${data.current.temp_c}°C</p>
+                    </div>
                 `);
             })
         });
