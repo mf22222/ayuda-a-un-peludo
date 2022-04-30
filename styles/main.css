@@ -5,3 +5,42 @@
 .hide {
     display: none;
 }
+
+.weather {
+    width: 306px;
+    background-color: #eaeaea;
+    margin: 10px auto;
+    border-radius: 5px;
+    padding: 8px;
+    text-align: center;
+}
+
+.section {
+    padding: 32px;
+    margin: 16px 0;
+}
+
+.help-item-img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+.help-item-container {
+    background-color: #eaeaea;
+    margin: 0 8px 0 0;
+    padding: 16px;
+    border-radius: 5px;
+}
+
+.footer {
+    background-color: #eaeaea;
+    bottom: 0;
+    height: 300px;
+    width: 100%;
+}
+
+.map {
+    height: 400px;
+    width: 100%;
+}

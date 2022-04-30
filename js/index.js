@@ -32,11 +32,28 @@ $(document).ready(function() {
             $.get(`https://api.weatherapi.com/v1/current.json?q=${position.coords.latitude},${position.coords.longitude}&key=${weatherApiKey}`, 
             function(data) {
                 console.log(data)
+                $('#weather').html(`
+                    <div class="weather">
+                        <p>El clima en ${data.location.country}, ${data.location.region}</p>
+                        <p><img src="https:${data.current.condition.icon}"/> ${data.current.temp_c}°C</p>
+                `);
             })
         });
     } else {
         /* geolocation IS NOT available */
         console.log("not available")
     }
-});
 
+    let map = new ol.Map({
+        target: 'map',
+        layers: [
+            new ol.layer.Tile({
+            source: new ol.source.OSM()
+            })
+        ],
+        view: new ol.View({
+            center: ol.proj.fromLonLat([-70.65756761617249,-33.4471033392087]),
+            zoom: 18
+        })
+    });
+});
