@@ -1,3 +1,5 @@
 # Ayuda a un peludo
 
-Hola mundo
+Aplicación de ejemplo.
+
+Hola mundo.
