@@ -53,6 +53,10 @@
                             class="help-item-img"
                         />
                         <a href="/">Perros</a>
+                        {% for pet in pets %}
+                        <p>{{ pet.name }}</p>
+                        <p>{{ pet.id }}</p>
+                        {% endfor %}
                     </div>
                 </div>
             </section>

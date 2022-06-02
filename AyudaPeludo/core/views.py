@@ -1,4 +1,10 @@
 from django.shortcuts import render
+from .models import Pet
 
 def home(request):
-    return render(request, 'core/home.html')
+    pets = Pet.objects.all()
+    
+    datos = {
+        'pets': pets
+    }
+    return render(request, 'core/home.html', datos)
