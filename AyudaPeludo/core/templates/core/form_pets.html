@@ -1,0 +1,21 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ingreso de mascota</title>
+    </head>
+    <body>
+        <form method="post" action="" id="petform">
+            {% csrf_token %}
+            <div class="form-group">
+                {{ form.as_table }}
+            </div>
+
+            <input type="submit" value="Enviar">
+        </form>
+        <div>
+            {{ message }}
+        </div>
+    </body>
+
+</html>
