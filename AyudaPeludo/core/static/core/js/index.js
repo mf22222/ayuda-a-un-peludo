@@ -2,6 +2,10 @@ const weatherApiKey = 0; // poner tu api key
 let contadorClicks = 0;
 
 $(document).ready(function() {
+    console.log("HOLA")
+    $.get('http://127.0.0.1:8000/api/lista_pets', function(data) { 
+        console.log(data)
+    });
 
     $('#imagenPerro').click(function() {
         contadorClicks += 1;

@@ -3,6 +3,10 @@ let contadorClicks = 0;
 
 $(document).ready(function() {
 
+    $.get('http://127.0.0.1:8000/api/lista_pets', function(data) { 
+        console.log(data)
+    });
+
     $('#imagenPerro').click(function() {
         contadorClicks += 1;
         console.log(contadorClicks);
